@@ -4,18 +4,16 @@
   box-sizing: border-box;
 }
 
+a {
+  color: white;
+}
 a:hover {
   text-decoration: none;
+  color: white;
 }
 
 .nav-container {
   background-color: #e06138;
-}
-.nav-container .rotation {
-  transform: rotate(90deg);
-}
-.nav-container a {
-  color: white;
 }
 
 .landing {
@@ -44,5 +42,83 @@ a:hover {
   color: #e06138;
 }
 .functionalities .row-container {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.clients {
+  background-color: #e06138;
+}
+.clients .d-flex {
+  width: 80%;
+}
+.clients .d-flex .clients-info {
+  font-size: 20px;
+}
+.clients img {
+  width: 20%;
+  height: 250px;
+  border-radius: 100%;
+}
+.clients button {
+  color: #e06138;
+}
+.clients button:hover {
+  background-color: #e2e6ea;
+}
+
+.flexibility {
+  background-color: #6c757d;
+}
+.flexibility .d-flex {
+  width: 80%;
+}
+.flexibility .d-flex .clients-info {
+  font-size: 20px;
+}
+.flexibility img {
+  width: 20%;
+  height: 250px;
+  border-radius: 100%;
+}
+.flexibility button:hover {
+  background-color: #e2e6ea;
+}
+
+.hours {
+  background-color: #007bff;
+}
+.hours .d-flex {
+  width: 80%;
+}
+.hours .d-flex .clients-info {
+  font-size: 20px;
+}
+.hours img {
+  width: 20%;
+  height: 250px;
+  border-radius: 100%;
+}
+
+footer {
+  background-color: black;
+}
+footer .icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: -1%;
+}
+footer input {
+  background-color: black;
+  border: 1px solid lightgray;
+}
+footer button {
+  background-color: #6c757d;
+  border: 1px solid lightgray;
+}
+footer .email {
+  color: #cf352d;
+  font-size: 18px;
+}
+footer .learn-more {
+  color: #cf352d;
 }

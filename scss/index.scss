@@ -1,26 +1,52 @@
 $color-red: #e06138;
+$color-grey: #6c757d;
+$color-footer: #cf352d;
+
+@mixin button {
+    &:hover {
+        background-color: #e2e6ea;
+     }
+}
+
+@mixin flexibity-clients {
+    .d-flex {
+        width: 80%;
+        .clients-info {
+            font-size: 20px;
+        }
+    }
+
+    img {
+        width: 20%;
+        height: 250px;
+        border-radius: 100%;
+    }
+}
+
+@mixin border {
+    border: 1px solid lightgray;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a:hover {
+a {
+    color: white;
+    &:hover {
     text-decoration: none;
+    color: white;
+}
 }
 
+    // navbar
 .nav-container {
     background-color: $color-red;
-
-    .rotation {
-        transform: rotate(90deg);
-    }
-
-    a {
-        color: white;
-    }
 }
 
+    // section 1
 .landing {
     background: url(../images/houses.jpg);
     min-height: 95vh;
@@ -43,17 +69,69 @@ a:hover {
         }
         
     button {
-        &:hover {
-            background-color: #e2e6ea;
-         }
+            @include button;
         }
     }
 
+        // section 2
     .functionalities {
         h5 {
             color: $color-red;
         }
         .row-container {
-            margin-top: 100px;
+            margin-top: 50px;
+        }
+    }
+        //section 3
+    .clients {
+        background-color: $color-red;
+        @include flexibity-clients;
+        button {
+            @include button;
+            color: $color-red;
+        }
+    }
+
+        //section 4
+    .flexibility {
+        background-color: $color-grey;
+        @include flexibity-clients;
+        button {
+            @include button;
+        }
+    }
+
+        //section 5
+    .hours {
+        background-color: #007bff;
+        @include flexibity-clients;
+    }
+
+        //footer
+    footer {
+        background-color: black;
+        .icon {
+            border: 1px solid white;
+            border-radius: 50%;
+            margin-top: -1%;
+        }
+
+        input {
+            background-color: black;
+            @include border;
+        }
+
+        button {
+            background-color: $color-grey;
+            @include border;
+        }
+
+        .email {
+            color: $color-footer;
+            font-size: 18px;
+        }
+
+        .learn-more {
+            color: $color-footer;
         }
     }
