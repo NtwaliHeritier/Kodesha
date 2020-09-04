@@ -15,11 +15,29 @@ a:hover {
 .nav-container {
   background-color: #e06138;
 }
+@media screen and (max-width: 767px) {
+  .nav-container nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .nav-container .nav-icons {
     width: 75%;
     justify-content: space-between;
     padding-left: 5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-container .nav-icons {
+    margin-top: 3%;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-container .d-md-none {
+    display: none;
   }
 }
 
@@ -35,6 +53,11 @@ a:hover {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 767px) {
+  .landing p {
+    font-size: 25px;
+  }
+}
 .landing .landing-form {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid transparent;
@@ -46,8 +69,12 @@ a:hover {
 .landing .landing-form a {
   background-color: #e06138;
 }
+.landing button {
+  transition: transform 0.5s linear;
+}
 .landing button:hover {
   background-color: #e2e6ea;
+  transform: translateY(-5px);
 }
 
 .functionalities h5 {
@@ -55,6 +82,25 @@ a:hover {
 }
 .functionalities .row-container {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .functionalities .row-container .col-lg-5 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.functionalities .row-container .col-lg-5 span {
+  order: 2;
+}
+@media screen and (max-width: 767px) {
+  .functionalities .row-container .col-lg-5 span {
+    margin-bottom: 10%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .functionalities .row-container .p-cont {
+    display: none;
+  }
 }
 
 .clients {
@@ -72,10 +118,12 @@ a:hover {
   border-radius: 100%;
 }
 .clients button {
+  transition: transform 0.5s linear;
   color: #e06138;
 }
 .clients button:hover {
   background-color: #e2e6ea;
+  transform: translateY(-5px);
 }
 
 .flexibility {
@@ -92,8 +140,12 @@ a:hover {
   height: 250px;
   border-radius: 100%;
 }
+.flexibility button {
+  transition: transform 0.5s linear;
+}
 .flexibility button:hover {
   background-color: #e2e6ea;
+  transform: translateY(-5px);
 }
 
 .hours {
@@ -131,7 +183,39 @@ footer {
     margin-bottom: 1%;
   }
 }
+@media screen and (max-width: 767px) {
+  footer .footer-top {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  footer .footer-top ul {
+    padding: 3% 4%;
+    align-self: center;
+  }
+  footer .footer-top ul a {
+    margin: 0 20px;
+  }
+  footer .footer-top .icon {
+    padding: 5%;
+    margin-bottom: 1%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  footer .footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-middle .col-lg-4:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-middle .col-lg-4:nth-child(2) {
+    margin: 5% 0;
+  }
+}
+@media screen and (max-width: 767px) {
   footer .footer-middle {
     display: flex;
     flex-direction: column;

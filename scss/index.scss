@@ -3,8 +3,10 @@ $color-grey: #6c757d;
 $color-footer: #cf352d;
 
 @mixin button {
+    transition: transform .5s linear;
     &:hover {
         background-color: #e2e6ea;
+        transform: translateY(-5px);
      }
 }
 
@@ -34,6 +36,12 @@ $color-footer: #cf352d;
     }
 }
 
+@mixin phone {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -52,11 +60,30 @@ a {
 .nav-container {
     background-color: $color-red;
 
+    nav {
+        @include phone {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
     .nav-icons {
         @include tablets {
                 width: 75%;
                 justify-content: space-between;
                 padding-left: 5%;
+        }
+
+        @include phone {
+            margin-top: 3%;
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+
+    .d-md-none {
+        @include phone {
+            display: none;
         }
     }
 }
@@ -71,6 +98,10 @@ a {
 
     p {
         @include tablets {
+            font-size: 25px;
+        }
+
+        @include phone {
             font-size: 25px;
         }
     }
@@ -101,6 +132,24 @@ a {
         }
         .row-container {
             margin-top: 50px;
+            .col-lg-5 {
+                @include phone {
+                    display: flex;
+                    flex-direction: column;
+                }
+                span {
+                    order: 2;
+                    @include phone {
+                        margin-bottom: 10%;
+                    }
+                }
+            }
+
+            .p-cont {
+                @include phone {
+                    display: none;
+                }
+            }
         }
     }
         //section 3
@@ -148,10 +197,43 @@ a {
                     margin-bottom: 1%;
                 }
             }
+
+            @include phone {
+                flex-direction: column;
+                justify-content: space-between;
+                ul {
+                    padding: 3% 4%;
+                    align-self: center;
+                    a {
+                        margin: 0 20px;
+                    }
+                }
+                .icon {
+                    padding: 5%;
+                    margin-bottom: 1%;
+                }
+            }
         }
 
         .footer-middle {
             @include tablets {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .col-lg-4 {
+                    &:nth-child(1) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    &:nth-child(2) {
+                        margin: 5% 0;
+                    }
+                }
+            }
+
+            @include phone {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
