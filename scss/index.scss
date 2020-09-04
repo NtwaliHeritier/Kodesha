@@ -131,6 +131,44 @@ a {
         //footer
     footer {
         background-color: black;
+
+        .footer-top {
+            @include tablets {
+                flex-direction: column;
+                justify-content: space-between;
+                ul {
+                    padding: 3% 4%;
+                    align-self: center;
+                    a {
+                        margin: 0 20px;
+                    }
+                }
+                .icon {
+                    padding: 5%;
+                    margin-bottom: 1%;
+                }
+            }
+        }
+
+        .footer-middle {
+            @include tablets {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .col-lg-4 {
+                    &:nth-child(1) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    &:nth-child(2) {
+                        margin: 5% 0;
+                    }
+                }
+            }
+        }
+
         .icon {
             border: 1px solid white;
             border-radius: 50%;
