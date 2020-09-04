@@ -27,6 +27,13 @@ $color-footer: #cf352d;
     border: 1px solid lightgray;
 }
 
+// responsive design
+@mixin tablets {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -44,6 +51,14 @@ a {
     // navbar
 .nav-container {
     background-color: $color-red;
+
+    .nav-icons {
+        @include tablets {
+                width: 75%;
+                justify-content: space-between;
+                padding-left: 5%;
+        }
+    }
 }
 
     // section 1
@@ -53,6 +68,12 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    p {
+        @include tablets {
+            font-size: 25px;
+        }
+    }
 
     .landing-form {
         background-color: rgba(255, 255, 255, 0.5);
@@ -135,3 +156,5 @@ a {
             color: $color-footer;
         }
     }
+
+    

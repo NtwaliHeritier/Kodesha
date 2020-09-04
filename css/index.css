@@ -15,6 +15,13 @@ a:hover {
 .nav-container {
   background-color: #e06138;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-container .nav-icons {
+    width: 75%;
+    justify-content: space-between;
+    padding-left: 5%;
+  }
+}
 
 .landing {
   background: url(../images/houses.jpg);
@@ -22,6 +29,11 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .landing p {
+    font-size: 25px;
+  }
 }
 .landing .landing-form {
   background-color: rgba(255, 255, 255, 0.5);
