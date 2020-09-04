@@ -43,3 +43,6 @@ a:hover {
 .functionalities h5 {
   color: #e06138;
 }
+.functionalities .row-container {
+  margin-top: 100px;
+}
