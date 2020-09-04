@@ -1,0 +1,56 @@
+$color-red: #e06138;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.nav-container {
+    background-color: $color-red;
+
+    .rotation {
+        transform: rotate(90deg);
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.landing {
+    background: url(../images/houses.jpg);
+    min-height: 95vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .landing-form {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        input {
+            width: 40vw;
+        }
+
+        a {
+            background-color: $color-red;
+        }
+        }
+        
+    button {
+        &:hover {
+            background-color: #e2e6ea;
+         }
+        }
+    }
+
+    .functionalities {
+        h5 {
+            color: $color-red;
+        }
+    }
