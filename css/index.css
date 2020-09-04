@@ -65,7 +65,11 @@ a:hover {
 }
 @media screen and (max-width: 767px) {
   .landing .landing-form {
-    padding: 15%;
+    padding: 17%;
+    padding-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .landing .landing-form input {
