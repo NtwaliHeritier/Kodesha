@@ -65,7 +65,7 @@ a:hover {
 }
 @media screen and (max-width: 767px) {
   .landing .landing-form {
-    padding: 10%;
+    padding: 15%;
   }
 }
 .landing .landing-form input {
@@ -77,6 +77,9 @@ a:hover {
 @media screen and (max-width: 767px) {
   .landing .landing-form form {
     position: relative;
+  }
+  .landing .landing-form form input {
+    width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -270,4 +273,10 @@ footer .email {
 }
 footer .learn-more {
   color: #cf352d;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-bottom {
+    display: none;
+  }
 }

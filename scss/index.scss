@@ -115,7 +115,7 @@ a {
         border-radius: 5px;
 
         @include phone {
-            padding: 10%;
+            padding: 15%;
         }
 
         input {
@@ -125,9 +125,13 @@ a {
         a {
             background-color: $color-red;
         }
+
         form {
             @include phone {
                 position: relative;
+                input {
+                    width: 100%;
+                }
             }
         }
 
@@ -298,6 +302,12 @@ a {
 
         .learn-more {
             color: $color-footer;
+        }
+    }
+
+    .footer-bottom {
+        @include phone {
+            display: none;
         }
     }
 
