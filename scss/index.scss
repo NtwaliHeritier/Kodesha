@@ -30,17 +30,20 @@ $color-footer: #cf352d;
 }
 
 // responsive design
+//tablet view
 @mixin tablets {
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         @content;
     }
 }
-
+//phone view
 @mixin phone {
     @media screen and (max-width: 767px) {
         @content;
     }
 }
+
+// end of responsive design
 
 * {
     margin: 0;
@@ -111,12 +114,33 @@ a {
         border: 1px solid transparent;
         border-radius: 5px;
 
+        @include phone {
+            padding: 10%;
+        }
+
         input {
             width: 40vw;
         }
 
         a {
             background-color: $color-red;
+        }
+        form {
+            @include phone {
+                position: relative;
+            }
+        }
+
+        .input-group-prepend {
+            @include phone {
+                position: absolute;
+                bottom: -160%;
+                width: 100%;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+            }
         }
         }
         

@@ -63,11 +63,32 @@ a:hover {
   border: 1px solid transparent;
   border-radius: 5px;
 }
+@media screen and (max-width: 767px) {
+  .landing .landing-form {
+    padding: 10%;
+  }
+}
 .landing .landing-form input {
   width: 40vw;
 }
 .landing .landing-form a {
   background-color: #e06138;
+}
+@media screen and (max-width: 767px) {
+  .landing .landing-form form {
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  .landing .landing-form .input-group-prepend {
+    position: absolute;
+    bottom: -160%;
+    width: 100%;
+  }
+  .landing .landing-form .input-group-prepend a {
+    display: block;
+    width: 100%;
+  }
 }
 .landing button {
   transition: transform 0.5s linear;
