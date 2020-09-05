@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Mint Clone
+# KODESHA
 
 > This is my capstone project for the HTML/ CSS curriculum at Microverse
 
