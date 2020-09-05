@@ -284,6 +284,34 @@ a {
 
     .filter-form {
         background-color: #eeeeee;
+        form {
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            @include tablets {
+                flex-direction: column;
+                align-items: stretch;
+                div {
+                    margin-bottom: 2%;
+                }
+
+                .align-self-lg-end {
+                    align-self: start;
+                }
+            }
+
+            @include phone {
+                flex-direction: column;
+                align-items: stretch;
+                div {
+                    margin-bottom: 2%;
+                }
+
+                .align-self-lg-end {
+                    align-self: start;
+                }
+            }
+        }
     }
 
     .search-results {
@@ -291,13 +319,20 @@ a {
             justify-content: space-around;
             a {
                 width: 25%;
-                background-color: $color-red;
                 div {
                     height: 100%;
                 }
                 img {
                     width: 100%;
                     height: 80%;
+            }
+        }
+
+        @include phone {
+            flex-direction: column;
+            align-items: center;
+            a {
+                width: 80%;
             }
         }
     }
