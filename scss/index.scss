@@ -114,39 +114,15 @@ a {
         border: 1px solid transparent;
         border-radius: 5px;
 
-        @include phone {
-            padding: 17%;
-            padding-bottom: 20%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        input {
-            width: 40vw;
-        }
-
         a {
             background-color: $color-red;
         }
 
-        form {
-            @include phone {
-                position: relative;
+        @include phone {
+            form {
+                flex-direction: column;
                 input {
-                    width: 100%;
-                }
-            }
-        }
-
-        .input-group-prepend {
-            @include phone {
-                position: absolute;
-                bottom: -160%;
-                width: 100%;
-                a {
                     display: block;
-                    width: 100%;
                 }
             }
         }
@@ -213,39 +189,34 @@ a {
     footer {
         background-color: black;
 
-        .footer-top {
-            @include tablets {
-                flex-direction: column;
-                justify-content: space-between;
-                ul {
-                    padding: 3% 4%;
-                    align-self: center;
-                    a {
-                        margin: 0 20px;
-                    }
-                }
-                .icon {
-                    padding: 5%;
-                    margin-bottom: 1%;
-                }
+       .footer-top {
+           align-items: center;
+           justify-content: center;
+           .icon {
+            border: 1px solid white;
+            border-radius: 50%;
+           }
+           @include tablets {
+               flex-direction: column;
+               justify-content: space-between;
+               .icon {
+                   padding: 2%;
+                   margin: .5% 0;
+               }
+           }
+
+           @include phone {
+            flex-direction: column;
+            a {
+                font-size: 10px;
             }
 
-            @include phone {
-                flex-direction: column;
-                justify-content: space-between;
-                ul {
-                    padding: 3% 4%;
-                    align-self: center;
-                    a {
-                        margin: 0 20px;
-                    }
-                }
-                .icon {
-                    padding: 5%;
-                    margin-bottom: 1%;
-                }
+            .icon {
+                padding: 2%;
+                margin: .5% 0;
             }
         }
+       }
 
         .footer-middle {
             @include tablets {
@@ -283,12 +254,6 @@ a {
             }
         }
 
-        .icon {
-            border: 1px solid white;
-            border-radius: 50%;
-            margin-top: -1%;
-        }
-
         input {
             background-color: black;
             @include border;
@@ -315,4 +280,25 @@ a {
         }
     }
 
-    
+    // house page style
+
+    .filter-form {
+        background-color: #eeeeee;
+    }
+
+    .search-results {
+        .d-flex {
+            justify-content: space-around;
+            a {
+                width: 25%;
+                background-color: $color-red;
+                div {
+                    height: 100%;
+                }
+                img {
+                    width: 100%;
+                    height: 80%;
+            }
+        }
+    }
+    }

@@ -63,38 +63,15 @@ a:hover {
   border: 1px solid transparent;
   border-radius: 5px;
 }
-@media screen and (max-width: 767px) {
-  .landing .landing-form {
-    padding: 17%;
-    padding-bottom: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.landing .landing-form input {
-  width: 40vw;
-}
 .landing .landing-form a {
   background-color: #e06138;
 }
 @media screen and (max-width: 767px) {
   .landing .landing-form form {
-    position: relative;
+    flex-direction: column;
   }
   .landing .landing-form form input {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .landing .landing-form .input-group-prepend {
-    position: absolute;
-    bottom: -160%;
-    width: 100%;
-  }
-  .landing .landing-form .input-group-prepend a {
     display: block;
-    width: 100%;
   }
 }
 .landing button {
@@ -194,74 +171,65 @@ a:hover {
 footer {
   background-color: black;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  footer .footer-top {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  footer .footer-top ul {
-    padding: 3% 4%;
-    align-self: center;
-  }
-  footer .footer-top ul a {
-    margin: 0 20px;
-  }
-  footer .footer-top .icon {
-    padding: 5%;
-    margin-bottom: 1%;
-  }
+footer .footer-top {
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-width: 767px) {
-  footer .footer-top {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  footer .footer-top ul {
-    padding: 3% 4%;
-    align-self: center;
-  }
-  footer .footer-top ul a {
-    margin: 0 20px;
-  }
-  footer .footer-top .icon {
-    padding: 5%;
-    margin-bottom: 1%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  footer .footer-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .footer-middle .col-lg-4:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .footer-middle .col-lg-4:nth-child(2) {
-    margin: 5% 0;
-  }
-}
-@media screen and (max-width: 767px) {
-  footer .footer-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .footer-middle .col-lg-4:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .footer-middle .col-lg-4:nth-child(2) {
-    margin: 5% 0;
-  }
-}
-footer .icon {
+footer .footer-top .icon {
   border: 1px solid white;
   border-radius: 50%;
-  margin-top: -1%;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  footer .footer-top {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  footer .footer-top .icon {
+    padding: 2%;
+    margin: 0.5% 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer-top {
+    flex-direction: column;
+  }
+  footer .footer-top a {
+    font-size: 10px;
+  }
+  footer .footer-top .icon {
+    padding: 2%;
+    margin: 0.5% 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  footer .footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-middle .col-lg-4:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-middle .col-lg-4:nth-child(2) {
+    margin: 5% 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-middle .col-lg-4:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-middle .col-lg-4:nth-child(2) {
+    margin: 5% 0;
+  }
 }
 footer input {
   background-color: black;
@@ -283,4 +251,23 @@ footer .learn-more {
   .footer-bottom {
     display: none;
   }
+}
+
+.filter-form {
+  background-color: #eeeeee;
+}
+
+.search-results .d-flex {
+  justify-content: space-around;
+}
+.search-results .d-flex a {
+  width: 25%;
+  background-color: #e06138;
+}
+.search-results .d-flex a div {
+  height: 100%;
+}
+.search-results .d-flex a img {
+  width: 100%;
+  height: 80%;
 }
