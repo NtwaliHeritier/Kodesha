@@ -319,3 +319,7 @@ footer .learn-more {
   border: 1px solid lightgray;
   text-align: center;
 }
+
+.section3 .container {
+  background-color: #eeeeee;
+}
