@@ -41,6 +41,11 @@ a:hover {
   }
 }
 
+.footer-middle button {
+  background-color: #6c757d;
+  border: 1px solid lightgray;
+}
+
 .landing {
   background: url(../images/houses.jpg);
   min-height: 95vh;
@@ -209,12 +214,12 @@ footer .footer-top .icon {
     flex-direction: column;
     align-items: center;
   }
-  footer .footer-middle .col-lg-4:nth-child(1) {
+  footer .footer-middle .middle1 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  footer .footer-middle .col-lg-4:nth-child(2) {
+  footer .footer-middle .middle2 {
     margin: 5% 0;
   }
 }
@@ -237,10 +242,6 @@ footer input {
   background-color: black;
   border: 1px solid lightgray;
 }
-footer button {
-  background-color: #6c757d;
-  border: 1px solid lightgray;
-}
 footer .email {
   color: #cf352d;
   font-size: 18px;
@@ -256,7 +257,7 @@ footer .learn-more {
 }
 
 .filter-form {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 .filter-form form {
   align-items: center;
@@ -312,10 +313,10 @@ footer .learn-more {
 }
 
 .section1 {
-  background-color: #eeeeee;
+  background-color: #eee;
   width: 80%;
   margin: auto;
-  box-shadow: 0px 6px 25px -7px black;
+  box-shadow: 0 6px 25px -7px black;
 }
 .section1 h5 {
   border: 1px solid lightgray;
@@ -323,5 +324,5 @@ footer .learn-more {
 }
 
 .section3 .container {
-  background-color: #eeeeee;
+  background-color: #eee;
 }

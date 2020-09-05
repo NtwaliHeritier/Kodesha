@@ -3,358 +3,390 @@ $color-grey: #6c757d;
 $color-footer: #cf352d;
 
 @mixin button {
-    transition: transform .5s linear;
-    &:hover {
-        background-color: #e2e6ea;
-        transform: translateY(-5px);
-     }
+  transition: transform 0.5s linear;
+
+  &:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-5px);
+  }
 }
 
 @mixin flexibity-clients {
-    .d-flex {
-        width: 80%;
-        .clients-info {
-            font-size: 20px;
-        }
-    }
+  .d-flex {
+    width: 80%;
 
-    img {
-        width: 20%;
-        height: 250px;
-        border-radius: 100%;
+    .clients-info {
+      font-size: 20px;
     }
+  }
+
+  img {
+    width: 20%;
+    height: 250px;
+    border-radius: 100%;
+  }
 }
 
 @mixin border {
-    border: 1px solid lightgray;
+  border: 1px solid lightgray;
 }
 
 // responsive design
 //tablet view
 @mixin tablets {
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        @content;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
 }
 //phone view
 @mixin phone {
-    @media screen and (max-width: 767px) {
-        @content;
-    }
+  @media screen and (max-width: 767px) {
+    @content;
+  }
 }
 
 // end of responsive design
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    color: white;
-    &:hover {
+  color: white;
+
+  &:hover {
     text-decoration: none;
     color: white;
-}
+  }
 }
 
-    // navbar
+// navbar
 .nav-container {
-    background-color: $color-red;
+  background-color: $color-red;
 
-    nav {
-        @include phone {
-            flex-direction: column;
-            justify-content: space-between;
-        }
+  nav {
+    @include phone {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .nav-icons {
+    @include tablets {
+      width: 75%;
+      justify-content: space-between;
+      padding-left: 5%;
     }
 
-    .nav-icons {
-        @include tablets {
-                width: 75%;
-                justify-content: space-between;
-                padding-left: 5%;
-        }
-
-        @include phone {
-            margin-top: 3%;
-            justify-content: space-around;
-            width: 100%;
-        }
+    @include phone {
+      margin-top: 3%;
+      justify-content: space-around;
+      width: 100%;
     }
+  }
 
-    .d-md-none {
-        @include phone {
-            display: none;
-        }
+  .d-md-none {
+    @include phone {
+      display: none;
     }
+  }
 }
 
-    // section 1
+// section 1
+
+.footer-middle {
+  button {
+    background-color: $color-grey;
+
+    @include border;
+  }
+}
+
 .landing {
-    background: url(../images/houses.jpg);
-    min-height: 95vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background: url(../images/houses.jpg);
+  min-height: 95vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    p {
-        @include tablets {
-            font-size: 25px;
-        }
-
-        @include phone {
-            font-size: 25px;
-        }
+  p {
+    @include tablets {
+      font-size: 25px;
     }
 
-    .landing-form {
-        background-color: rgba(255, 255, 255, 0.5);
-        border: 1px solid transparent;
-        border-radius: 5px;
+    @include phone {
+      font-size: 25px;
+    }
+  }
 
-        a {
-            background-color: $color-red;
-        }
+  .landing-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+    border-radius: 5px;
 
-        @include phone {
-            form {
-                max-width: 100%;
-                flex-direction: column;
-                input {
-                    display: block;
-                    margin-bottom: 1%;
-                }
-            }
-        }
-        }
-        
-    button {
-            @include button;
-        }
+    a {
+      background-color: $color-red;
     }
 
-        // section 2
-    .functionalities {
-        h5 {
-            color: $color-red;
-        }
-        .row-container {
-            margin-top: 50px;
-            .col-lg-5 {
-                @include phone {
-                    display: flex;
-                    flex-direction: column;
-                }
-                span {
-                    order: 2;
-                    @include phone {
-                        margin-bottom: 10%;
-                    }
-                }
-            }
-
-            .p-cont {
-                @include phone {
-                    display: none;
-                }
-            }
-        }
-    }
-        //section 3
-    .clients {
-        background-color: $color-red;
-        @include flexibity-clients;
-        button {
-            @include button;
-            color: $color-red;
-        }
-    }
-
-        //section 4
-    .flexibility {
-        background-color: $color-grey;
-        @include flexibity-clients;
-        button {
-            @include button;
-        }
-    }
-
-        //section 5
-    .hours {
-        background-color: #007bff;
-        @include flexibity-clients;
-    }
-
-        //footer
-    footer {
-        background-color: black;
-
-       .footer-top {
-           align-items: center;
-           justify-content: center;
-           .icon {
-            border: 1px solid white;
-            border-radius: 50%;
-           }
-           @include tablets {
-               flex-direction: column;
-               justify-content: space-between;
-               .icon {
-                   padding: 2%;
-                   margin: .5% 0;
-               }
-           }
-
-           @include phone {
-            flex-direction: column;
-            a {
-                font-size: 10px;
-            }
-
-            .icon {
-                padding: 2%;
-                margin: .5% 0;
-            }
-        }
-       }
-
-        .footer-middle {
-            @include tablets {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .col-lg-4 {
-                    &:nth-child(1) {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    &:nth-child(2) {
-                        margin: 5% 0;
-                    }
-                }
-            }
-
-            @include phone {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .col-lg-4 {
-                    &:nth-child(1) {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    &:nth-child(2) {
-                        margin: 5% 0;
-                    }
-                }
-            }
-        }
+    @include phone {
+      form {
+        max-width: 100%;
+        flex-direction: column;
 
         input {
-            background-color: black;
-            @include border;
+          display: block;
+          margin-bottom: 1%;
         }
-
-        button {
-            background-color: $color-grey;
-            @include border;
-        }
-
-        .email {
-            color: $color-footer;
-            font-size: 18px;
-        }
-
-        .learn-more {
-            color: $color-footer;
-        }
+      }
     }
+  }
 
-    .footer-bottom {
-        @include phone {
-            display: none;
-        }
-    }
+  button {
+    @include button;
+  }
+}
 
-    // house page style
+// section 2
+.functionalities {
+  h5 {
+    color: $color-red;
+  }
 
-    .filter-form {
-        background-color: #eeeeee;
-        form {
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            @include tablets {
-                flex-direction: column;
-                align-items: stretch;
-                div {
-                    margin-bottom: 2%;
-                }
+  .row-container {
+    margin-top: 50px;
 
-                .align-self-lg-end {
-                    align-self: start;
-                }
-            }
+    .col-lg-5 {
+      @include phone {
+        display: flex;
+        flex-direction: column;
+      }
 
-            @include phone {
-                flex-direction: column;
-                align-items: stretch;
-                div {
-                    margin-bottom: 2%;
-                }
-
-                .align-self-lg-end {
-                    align-self: start;
-                }
-            }
-        }
-    }
-
-    .search-results {
-        .d-flex {
-            justify-content: space-around;
-            a {
-                width: 25%;
-                div {
-                    height: 100%;
-                }
-                img {
-                    width: 100%;
-                    height: 80%;
-            }
-        }
+      span {
+        order: 2;
 
         @include phone {
-            flex-direction: column;
-            align-items: center;
-            a {
-                width: 80%;
-            }
+          margin-bottom: 10%;
         }
-    }
+      }
     }
 
-    //result page style
+    .p-cont {
+      @include phone {
+        display: none;
+      }
+    }
+  }
+}
+//section 3
+.clients {
+  background-color: $color-red;
 
-    .section1 {
-        background-color: #eeeeee;
+  @include flexibity-clients;
+
+  button {
+    @include button;
+
+    color: $color-red;
+  }
+}
+
+//section 4
+.flexibility {
+  background-color: $color-grey;
+
+  @include flexibity-clients;
+
+  button {
+    @include button;
+  }
+}
+
+//section 5
+.hours {
+  background-color: #007bff;
+
+  @include flexibity-clients;
+}
+
+//footer
+footer {
+  background-color: black;
+
+  .footer-top {
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+
+    @include tablets {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .icon {
+        padding: 2%;
+        margin: 0.5% 0;
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+
+      a {
+        font-size: 10px;
+      }
+
+      .icon {
+        padding: 2%;
+        margin: 0.5% 0;
+      }
+    }
+  }
+
+  .footer-middle {
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .middle1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .middle2 {
+        margin: 5% 0;
+      }
+    }
+
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .col-lg-4 {
+        &:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &:nth-child(2) {
+          margin: 5% 0;
+        }
+      }
+    }
+  }
+
+  input {
+    background-color: black;
+
+    @include border;
+  }
+
+  .email {
+    color: $color-footer;
+    font-size: 18px;
+  }
+
+  .learn-more {
+    color: $color-footer;
+  }
+}
+
+.footer-bottom {
+  @include phone {
+    display: none;
+  }
+}
+
+// house page style
+
+.filter-form {
+  background-color: #eee;
+
+  form {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: stretch;
+
+      div {
+        margin-bottom: 2%;
+      }
+
+      .align-self-lg-end {
+        align-self: start;
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+      align-items: stretch;
+
+      div {
+        margin-bottom: 2%;
+      }
+
+      .align-self-lg-end {
+        align-self: start;
+      }
+    }
+  }
+}
+
+.search-results {
+  .d-flex {
+    justify-content: space-around;
+
+    a {
+      width: 25%;
+
+      div {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+
+      a {
         width: 80%;
-        margin: auto;
-        box-shadow: 0px 6px 25px -7px rgba(0,0,0,1);
-        h5 {
-             border: 1px solid lightgray;
-             text-align: center;
-            }
-        }
-
-    .section3 {
-        .container {
-            background-color: #eeeeee;
-        }
+      }
     }
+  }
+}
+
+//result page style
+
+.section1 {
+  background-color: #eee;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 6px 25px -7px rgba(0, 0, 0, 1);
+
+  h5 {
+    border: 1px solid lightgray;
+    text-align: center;
+  }
+}
+
+.section3 {
+  .container {
+    background-color: #eee;
+  }
+}
