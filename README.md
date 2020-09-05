@@ -50,7 +50,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
+- Hat tip to Mathew Njuguna https://www.behance.net/mathewnjuguna
 - Inspiration
 - etc
 
