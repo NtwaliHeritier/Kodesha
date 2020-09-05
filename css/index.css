@@ -214,12 +214,12 @@ footer .footer-top .icon {
     flex-direction: column;
     align-items: center;
   }
-  footer .footer-middle .middle1 {
+  footer .footer-middle .col-lg-4:nth-child(1) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  footer .footer-middle .middle2 {
+  footer .footer-middle .col-lg-4:nth-child(2) {
     margin: 5% 0;
   }
 }

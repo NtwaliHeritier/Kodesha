@@ -253,15 +253,17 @@ footer {
       flex-direction: column;
       align-items: center;
 
-      .middle1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+      .col-lg-4 {
+        &:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
 
-      .middle2 {
-        margin: 5% 0;
-      }
+        &:nth-child(2) {
+          margin: 5% 0;
+        }
+    }
     }
 
     @include phone {
