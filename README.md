@@ -8,8 +8,8 @@
 
 ![screenshot](./screenshots/shot1.PNG)
 ![screenshot](./screenshots/shot2.PNG)
-![screenshot](./screenshots/screenshot3.PNG)
-![screenshot](./screenshots/screenshot4.PNG)
+![screenshot](./screenshots/shot3.PNG)
+![screenshot](./screenshots/shot4.PNG)
 
 ## Second page
 
