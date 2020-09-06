@@ -45,9 +45,6 @@ $color-footer: #cf352d;
     border-radius: 50%;
 
     @include phone {
-      height: 200px;
-      width: 200px;
-      border-radius: 0;
       margin-bottom: 2%;
     }
   }
@@ -213,10 +210,17 @@ a {
 
     @include phone {
       flex-direction: column;
-      align-items: flex-start;
 
       .py-1 {
         width: 100%;
+      }
+
+      .clients-info {
+        order: 2;
+      }
+
+      figure {
+        margin-top: 2%;
       }
     }
   }
@@ -248,19 +252,20 @@ a {
       .py-1 {
         width: 100%;
       }
+
+      .clients-info {
+        order: 2;
+      }
+
+      figure {
+        margin-top: 2%;
+      }
     }
   }
 
   button {
     @include button;
   }
-}
-
-//section 5
-.hours {
-  height: 20vh;
-
-  @include flexibity-clients;
 }
 
 //footer

@@ -180,9 +180,6 @@ a:hover {
 
 @media screen and (max-width: 767px) {
   .clients img {
-    height: 200px;
-    width: 200px;
-    border-radius: 0;
     margin-bottom: 2%;
   }
 }
@@ -190,11 +187,18 @@ a:hover {
 @media screen and (max-width: 767px) {
   .clients .d-flex {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .clients .d-flex .py-1 {
     width: 100%;
+  }
+
+  .clients .d-flex .clients-info {
+    order: 2;
+  }
+
+  .clients .d-flex figure {
+    margin-top: 2%;
   }
 }
 
@@ -231,9 +235,6 @@ a:hover {
 
 @media screen and (max-width: 767px) {
   .flexibility img {
-    height: 200px;
-    width: 200px;
-    border-radius: 0;
     margin-bottom: 2%;
   }
 }
@@ -246,40 +247,19 @@ a:hover {
   .flexibility .d-flex .py-1 {
     width: 100%;
   }
+
+  .flexibility .d-flex .clients-info {
+    order: 2;
+  }
+
+  .flexibility .d-flex figure {
+    margin-top: 2%;
+  }
 }
 
 .flexibility button:hover {
   background-color: #e2e6ea;
   transform: translateY(-5px);
-}
-
-.hours {
-  height: 20vh;
-  min-height: 35vh;
-}
-
-.hours .d-flex {
-  width: 90%;
-  margin: auto;
-}
-
-.hours .d-flex .clients-info {
-  font-size: 20px;
-}
-
-.hours img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 767px) {
-  .hours img {
-    height: 200px;
-    width: 200px;
-    border-radius: 0;
-    margin-bottom: 2%;
-  }
 }
 
 footer {
