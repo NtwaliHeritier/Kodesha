@@ -18,7 +18,6 @@ $color-footer: #cf352d;
 
 // end of responsive design
 
-
 @mixin button {
   transition: transform 0.5s linear;
 
@@ -30,6 +29,7 @@ $color-footer: #cf352d;
 
 @mixin flexibity-clients {
   min-height: 35vh;
+
   .d-flex {
     width: 90%;
     margin: auto;
@@ -43,6 +43,7 @@ $color-footer: #cf352d;
     height: 200px;
     width: 200px;
     border-radius: 50%;
+
     @include phone {
       height: 200px;
       width: 200px;
@@ -50,7 +51,6 @@ $color-footer: #cf352d;
       margin-bottom: 2%;
     }
   }
-
 }
 
 @mixin border {
@@ -143,21 +143,20 @@ a {
 
     @include phone {
       padding: 5% 0.8%;
+
       form {
         flex-direction: column;
 
         input {
           display: block;
           width: 80%;
-          margin-bottom: 1%;
-          margin: auto
+          margin: auto auto 1%;
         }
 
         a {
           margin: 1% auto 0;
           width: 80%;
         }
-
       }
     }
   }
@@ -201,21 +200,26 @@ a {
 //section 3
 .clients {
   background-color: $color-red;
+
   .py-1 {
     width: 75%;
   }
+
   @include flexibity-clients;
-          .d-flex{
-            justify-content: center;
-            align-items: center;
-          @include phone {
-            flex-direction: column;
-            align-items: flex-start;
-            .py-1 {
-              width: 100%;
-            }
-          }
-        }
+
+  .d-flex {
+    justify-content: center;
+    align-items: center;
+
+    @include phone {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .py-1 {
+        width: 100%;
+      }
+    }
+  }
 
   button {
     @include button;
@@ -227,24 +231,29 @@ a {
 //section 4
 .flexibility {
   background-color: $color-grey;
+
   .py-1 {
     width: 75%;
   }
-  @include flexibity-clients;
-      .d-flex{
-          justify-content: center;
-          align-items: center;
-          @include phone {
-            flex-direction: column;
-            .py-1 {
-              width: 100%;
-            }
-          }
-      }
 
-      button {
-        @include button;
+  @include flexibity-clients;
+
+  .d-flex {
+    justify-content: center;
+    align-items: center;
+
+    @include phone {
+      flex-direction: column;
+
+      .py-1 {
+        width: 100%;
       }
+    }
+  }
+
+  button {
+    @include button;
+  }
 }
 
 //section 5

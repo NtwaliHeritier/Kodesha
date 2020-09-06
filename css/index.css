@@ -7,6 +7,7 @@
 a {
   color: white;
 }
+
 a:hover {
   text-decoration: none;
   color: white;
@@ -15,12 +16,14 @@ a:hover {
 .nav-container {
   background-color: #e06138;
 }
+
 @media screen and (max-width: 767px) {
   .nav-container nav {
     flex-direction: column;
     justify-content: space-between;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .nav-container .nav-icons {
     width: 75%;
@@ -28,6 +31,7 @@ a:hover {
     padding-left: 5%;
   }
 }
+
 @media screen and (max-width: 767px) {
   .nav-container .nav-icons {
     margin-top: 3%;
@@ -35,6 +39,7 @@ a:hover {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 767px) {
   .nav-container .d-md-none {
     display: none;
@@ -53,46 +58,64 @@ a:hover {
   background-size: cover;
   background-position: center;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .landing h1 {
     font-size: 25px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .landing h1 {
     font-size: 25px;
   }
 }
+
 .landing .landing-form {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid transparent;
   border-radius: 5px;
   padding: 3%;
 }
+
 .landing .landing-form a {
   background-color: #e06138;
 }
+
 @media screen and (max-width: 767px) {
   .landing .landing-form {
     padding: 5% 0.8%;
   }
+
   .landing .landing-form form {
     flex-direction: column;
   }
+
   .landing .landing-form form input {
     display: block;
     width: 80%;
-    margin-bottom: 1%;
-    margin: auto;
+    margin: auto auto 1%;
   }
+
   .landing .landing-form form a {
     margin: 1% auto 0;
     width: 80%;
   }
 }
+
 .landing button {
   transition: transform 0.5s linear;
 }
+
+.clients button {
+  transition: transform 0.5s linear;
+  color: #e06138;
+}
+
+.flexibility button {
+  transition: transform 0.5s linear;
+}
+
 .landing button:hover {
   background-color: #e2e6ea;
   transform: translateY(-5px);
@@ -101,23 +124,28 @@ a:hover {
 .functionalities h5 {
   color: #e06138;
 }
+
 .functionalities .row-container {
   margin-top: 50px;
 }
+
 @media screen and (max-width: 767px) {
   .functionalities .row-container .col-lg-5 {
     display: flex;
     flex-direction: column;
   }
 }
+
 .functionalities .row-container .col-lg-5 span {
   order: 2;
 }
+
 @media screen and (max-width: 767px) {
   .functionalities .row-container .col-lg-5 span {
     margin-bottom: 10%;
   }
 }
+
 @media screen and (max-width: 767px) {
   .functionalities .row-container .p-cont {
     display: none;
@@ -128,21 +156,28 @@ a:hover {
   background-color: #e06138;
   min-height: 35vh;
 }
+
 .clients .py-1 {
   width: 75%;
 }
+
 .clients .d-flex {
   width: 90%;
   margin: auto;
+  justify-content: center;
+  align-items: center;
 }
+
 .clients .d-flex .clients-info {
   font-size: 20px;
 }
+
 .clients img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
+
 @media screen and (max-width: 767px) {
   .clients img {
     height: 200px;
@@ -151,23 +186,18 @@ a:hover {
     margin-bottom: 2%;
   }
 }
-.clients .d-flex {
-  justify-content: center;
-  align-items: center;
-}
+
 @media screen and (max-width: 767px) {
   .clients .d-flex {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .clients .d-flex .py-1 {
     width: 100%;
   }
 }
-.clients button {
-  transition: transform 0.5s linear;
-  color: #e06138;
-}
+
 .clients button:hover {
   background-color: #e2e6ea;
   transform: translateY(-5px);
@@ -177,21 +207,28 @@ a:hover {
   background-color: #6c757d;
   min-height: 35vh;
 }
+
 .flexibility .py-1 {
   width: 75%;
 }
+
 .flexibility .d-flex {
   width: 90%;
   margin: auto;
+  justify-content: center;
+  align-items: center;
 }
+
 .flexibility .d-flex .clients-info {
   font-size: 20px;
 }
+
 .flexibility img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
+
 @media screen and (max-width: 767px) {
   .flexibility img {
     height: 200px;
@@ -200,21 +237,17 @@ a:hover {
     margin-bottom: 2%;
   }
 }
-.flexibility .d-flex {
-  justify-content: center;
-  align-items: center;
-}
+
 @media screen and (max-width: 767px) {
   .flexibility .d-flex {
     flex-direction: column;
   }
+
   .flexibility .d-flex .py-1 {
     width: 100%;
   }
 }
-.flexibility button {
-  transition: transform 0.5s linear;
-}
+
 .flexibility button:hover {
   background-color: #e2e6ea;
   transform: translateY(-5px);
@@ -224,18 +257,22 @@ a:hover {
   height: 20vh;
   min-height: 35vh;
 }
+
 .hours .d-flex {
   width: 90%;
   margin: auto;
 }
+
 .hours .d-flex .clients-info {
   font-size: 20px;
 }
+
 .hours img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
+
 @media screen and (max-width: 767px) {
   .hours img {
     height: 200px;
@@ -248,74 +285,90 @@ a:hover {
 footer {
   background-color: black;
 }
+
 footer .footer-top {
   align-items: center;
   justify-content: center;
 }
+
 footer .footer-top .icon {
   border: 1px solid white;
   border-radius: 50%;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   footer .footer-top {
     flex-direction: column;
     justify-content: space-between;
   }
+
   footer .footer-top .icon {
     padding: 2%;
     margin: 0.5% 0;
   }
 }
+
 @media screen and (max-width: 767px) {
   footer .footer-top {
     flex-direction: column;
   }
+
   footer .footer-top a {
     font-size: 10px;
   }
+
   footer .footer-top .icon {
     padding: 2%;
     margin: 0.5% 0;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   footer .footer-middle {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   footer .footer-middle .col-lg-4:nth-child(1) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   footer .footer-middle .col-lg-4:nth-child(2) {
     margin: 5% 0;
   }
 }
+
 @media screen and (max-width: 767px) {
   footer .footer-middle {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   footer .footer-middle .col-lg-4:nth-child(1) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   footer .footer-middle .col-lg-4:nth-child(2) {
     margin: 5% 0;
   }
 }
+
 footer input {
   background-color: black;
   border: 1px solid lightgray;
 }
+
 footer .email {
   color: #cf352d;
   font-size: 18px;
 }
+
 footer .learn-more {
   color: #cf352d;
 }
@@ -329,31 +382,38 @@ footer .learn-more {
 .filter-form {
   background-color: #eee;
 }
+
 .filter-form form {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .filter-form form {
     flex-direction: column;
     align-items: stretch;
   }
+
   .filter-form form div {
     margin-bottom: 2%;
   }
+
   .filter-form form .align-self-lg-end {
     align-self: start;
   }
 }
+
 @media screen and (max-width: 767px) {
   .filter-form form {
     flex-direction: column;
     align-items: stretch;
   }
+
   .filter-form form div {
     margin-bottom: 2%;
   }
+
   .filter-form form .align-self-lg-end {
     align-self: start;
   }
@@ -362,21 +422,26 @@ footer .learn-more {
 .search-results .d-flex {
   justify-content: space-around;
 }
+
 .search-results .d-flex a {
   width: 25%;
 }
+
 .search-results .d-flex a div {
   height: 100%;
 }
+
 .search-results .d-flex a img {
   width: 100%;
   height: 80%;
 }
+
 @media screen and (max-width: 767px) {
   .search-results .d-flex {
     flex-direction: column;
     align-items: center;
   }
+
   .search-results .d-flex a {
     width: 80%;
   }
@@ -388,6 +453,7 @@ footer .learn-more {
   margin: auto;
   box-shadow: 0 6px 25px -7px black;
 }
+
 .section1 h5 {
   border: 1px solid lightgray;
   text-align: center;
