@@ -2,35 +2,6 @@ $color-red: #e06138;
 $color-grey: #6c757d;
 $color-footer: #cf352d;
 
-@mixin button {
-  transition: transform 0.5s linear;
-
-  &:hover {
-    background-color: #e2e6ea;
-    transform: translateY(-5px);
-  }
-}
-
-@mixin flexibity-clients {
-  .d-flex {
-    width: 80%;
-
-    .clients-info {
-      font-size: 20px;
-    }
-  }
-
-  img {
-    width: 20%;
-    height: 250px;
-    border-radius: 100%;
-  }
-}
-
-@mixin border {
-  border: 1px solid lightgray;
-}
-
 // responsive design
 //tablet view
 @mixin tablets {
@@ -46,6 +17,45 @@ $color-footer: #cf352d;
 }
 
 // end of responsive design
+
+
+@mixin button {
+  transition: transform 0.5s linear;
+
+  &:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-5px);
+  }
+}
+
+@mixin flexibity-clients {
+  min-height: 35vh;
+  .d-flex {
+    width: 90%;
+    margin: auto;
+
+    .clients-info {
+      font-size: 20px;
+    }
+  }
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    @include phone {
+      height: 200px;
+      width: 200px;
+      border-radius: 0;
+      margin-bottom: 2%;
+    }
+  }
+
+}
+
+@mixin border {
+  border: 1px solid lightgray;
+}
 
 * {
   margin: 0;
@@ -111,7 +121,7 @@ a {
   background-size: cover;
   background-position: center;
 
-  p {
+  h1 {
     @include tablets {
       font-size: 25px;
     }
@@ -125,20 +135,29 @@ a {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid transparent;
     border-radius: 5px;
+    padding: 3%;
 
     a {
       background-color: $color-red;
     }
 
     @include phone {
+      padding: 5% 0.8%;
       form {
-        max-width: 100%;
         flex-direction: column;
 
         input {
           display: block;
+          width: 80%;
           margin-bottom: 1%;
+          margin: auto
         }
+
+        a {
+          margin: 1% auto 0;
+          width: 80%;
+        }
+
       }
     }
   }
@@ -182,8 +201,21 @@ a {
 //section 3
 .clients {
   background-color: $color-red;
-
+  .py-1 {
+    width: 75%;
+  }
   @include flexibity-clients;
+          .d-flex{
+            justify-content: center;
+            align-items: center;
+          @include phone {
+            flex-direction: column;
+            align-items: flex-start;
+            .py-1 {
+              width: 100%;
+            }
+          }
+        }
 
   button {
     @include button;
@@ -195,17 +227,29 @@ a {
 //section 4
 .flexibility {
   background-color: $color-grey;
-
-  @include flexibity-clients;
-
-  button {
-    @include button;
+  .py-1 {
+    width: 75%;
   }
+  @include flexibity-clients;
+      .d-flex{
+          justify-content: center;
+          align-items: center;
+          @include phone {
+            flex-direction: column;
+            .py-1 {
+              width: 100%;
+            }
+          }
+      }
+
+      button {
+        @include button;
+      }
 }
 
 //section 5
 .hours {
-  background-color: #007bff;
+  height: 20vh;
 
   @include flexibity-clients;
 }

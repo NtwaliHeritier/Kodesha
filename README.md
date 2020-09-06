@@ -42,7 +42,7 @@ It is responsive across multiple devices.
 
 ## Live Link
 
-https://html-capstone.netlify.app/
+[Live demo](https://html-capstone.netlify.app/)
 
 ## Show your support
 
@@ -50,7 +50,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to Mathew Njuguna https://www.behance.net/mathewnjuguna
+- [Acknowlegment] Mathew Njuguna https://www.behance.net/mathewnjuguna
 - Inspiration
 - etc
 
