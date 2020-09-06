@@ -4,22 +4,15 @@
 
 > This is my capstone project for the HTML/ CSS curriculum at Microverse
 
-## First page
-
+## Landing page
+    - Desktop view
 ![screenshot](./screenshots/shot1.PNG)
-![screenshot](./screenshots/shot2.PNG)
-![screenshot](./screenshots/shot3.PNG)
-![screenshot](./screenshots/shot4.PNG)
 
-## Second page
+    - Tablet view
+![screenshot](./screenshots/tabletshot.PNG)  
 
-![screenshot](./screenshots/shot5.PNG)
-![screenshot](./screenshots/shot6.PNG)
-
-## Third page
-
-![screenshot](./screenshots/shot7.PNG)
-![screenshot](./screenshots/shot8.PNG)
+    - Phone view
+![screenshot](./screenshots/phoneshot.PNG)
 
 Additional description about the project and its features.
 
